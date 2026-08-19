@@ -1,0 +1,5 @@
+id_prioridade,nivel_prioridade,descricao,peso,cor_hex
+1,Crítica,Bloqueia o avanço do projeto ou entrega,1,#E53E3E
+2,Alta,Impacto significativo na entrega,2,#ED8936
+3,Média,Importante mas não bloqueia,3,#ECC94B
+4,Baixa,Melhoria desejável sem urgência,4,#48BB78

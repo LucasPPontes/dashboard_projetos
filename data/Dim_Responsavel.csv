@@ -1,0 +1,13 @@
+id_responsavel,nome,cargo,id_equipe,email,nivel_senioridade
+1,Carlos Mendes,Tech Lead Backend,1,carlos.mendes@empresa.com,Sênior
+2,Fernanda Lima,DevOps Engineer,4,fernanda.lima@empresa.com,Sênior
+3,Juliana Costa,Tech Lead Frontend,2,juliana.costa@empresa.com,Sênior
+4,Marcos Souza,UX Designer,5,marcos.souza@empresa.com,Pleno
+5,Roberto Alves,QA Lead,3,roberto.alves@empresa.com,Sênior
+6,Diego Ferreira,Desenvolvedor Backend,1,diego.ferreira@empresa.com,Pleno
+7,Camila Santos,Desenvolvedora Frontend,2,camila.santos@empresa.com,Pleno
+8,Thiago Oliveira,Desenvolvedor Backend,1,thiago.oliveira@empresa.com,Júnior
+9,Larissa Martins,QA Analyst,3,larissa.martins@empresa.com,Pleno
+10,Rafael Gomes,Desenvolvedor Frontend,2,rafael.gomes@empresa.com,Júnior
+11,Patrícia Nunes,Desenvolvedora Backend,1,patricia.nunes@empresa.com,Pleno
+12,Bruno Costa,QA Analyst,3,bruno.costa@empresa.com,Júnior

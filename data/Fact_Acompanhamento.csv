@@ -1,0 +1,69 @@
+id_acompanhamento,id_tarefa,id_responsavel,id_data,horas_estimadas,horas_trabalhadas,percentual_conclusao_dia,concluida_no_dia,observacao
+1,1,2,20250106,4,3.5,20,Não,Configuração inicial do repositório
+2,1,2,20250107,4,4,50,Não,Workflow de build concluído
+3,1,2,20250108,4,4,80,Não,Workflow de testes configurado
+4,1,2,20250109,2,3.5,100,Sim,Workflows de deploy finalizados
+5,6,2,20250108,5,6,30,Não,VPC e subnets provisionadas
+6,6,2,20250109,5,5,55,Não,RDS configurado e testado
+7,6,2,20250113,5,6,80,Não,EC2 e security groups configurados
+8,6,2,20250114,3,4,100,Sim,Load balancer configurado e testado
+9,10,4,20250106,4,4,40,Não,Wireframes iniciais do layout
+10,10,4,20250107,4,4,70,Não,Protótipo de alta fidelidade
+11,10,4,20250108,2,3,90,Não,Ajustes de feedback
+12,10,4,20250109,2,1,100,Sim,Aprovação do protótipo
+13,11,1,20250120,5,6,30,Não,Estrutura JWT definida
+14,11,1,20250121,5,5,60,Não,Endpoint de login funcionando
+15,11,1,20250122,5,4,80,Não,Refresh token implementado
+16,11,1,20250123,3,5,100,Sim,Logout e blacklist implementados
+17,16,3,20250120,4,4,25,Não,Layout da tela criado
+18,16,3,20250121,4,5,55,Não,Validações implementadas
+19,16,7,20250122,4,4,75,Não,Integração com API de autenticação
+20,16,3,20250124,2,3,90,Não,Animações e responsividade
+21,16,3,20250127,2,1.5,100,Sim,Ajustes finais após testes
+22,21,1,20250122,6,6,25,Não,Modelo de dados RBAC criado
+23,21,6,20250123,6,7,50,Não,Middleware de autorização
+24,21,6,20250124,6,5,70,Não,Testes de middleware
+25,21,1,20250127,4,5,85,Não,Painel de gestão de perfis
+26,21,1,20250128,2,3,100,Sim,Ajustes e documentação
+27,25,6,20250203,6,6,25,Não,Endpoints de CRUD criados
+28,25,6,20250204,6,6,50,Não,Validações implementadas
+29,25,6,20250205,6,7,75,Não,Testes unitários
+30,25,6,20250206,4,5,90,Não,Documentação da API
+31,25,6,20250207,2,1,100,Sim,Ajustes finais
+32,30,7,20250203,5,5,20,Não,Grid de listagem iniciado
+33,30,7,20250204,5,6,45,Não,Busca e filtros implementados
+34,30,7,20250205,5,5,65,Não,Formulário de cadastro
+35,30,7,20250206,5,6,85,Não,Tela de detalhes
+36,30,7,20250207,2,2,100,Sim,Testes e ajustes finais
+37,38,11,20250217,8,8,25,Não,Modelo de dados criado
+38,38,11,20250218,8,9,50,Não,API de lançamentos
+39,38,11,20250219,8,8,70,Não,Fluxo de aprovação
+40,38,11,20250220,6,7,85,Não,Integração com gateway
+41,38,11,20250221,2,1,100,Sim,Testes de integração
+42,42,1,20250217,7,7,25,Não,Modelo de dados de recebimento
+43,42,1,20250218,7,8,50,Não,Geração de boletos
+44,42,1,20250219,7,6,70,Não,Controle de recebimento
+45,42,1,20250220,5,6,85,Não,Relatório de inadimplência
+46,42,1,20250221,2,1,100,Sim,Revisão e documentação
+47,44,1,20250303,5,5,25,Não,Estrutura do fluxo de caixa
+48,44,1,20250304,5,6,55,Não,Consolidação de lançamentos
+49,44,1,20250305,5,5,80,Não,Gráficos de evolução
+50,44,1,20250306,3,4,100,Sim,Ajustes e testes
+51,47,11,20250317,8,8,25,Não,Modelo de movimentações
+52,47,11,20250318,8,9,50,Não,Entradas e saídas implementadas
+53,47,11,20250319,8,7,70,Não,Relatório de movimentações
+54,47,11,20250320,6,7,85,Não,Leitor de código de barras
+55,47,11,20250321,2,3,100,Sim,Testes e ajustes
+56,54,1,20250414,7,7,25,Não,Carrinho de itens
+57,54,1,20250415,7,8,50,Não,Cálculo de impostos
+58,54,1,20250416,7,7,70,Não,Fluxo de aprovação
+59,54,1,20250417,5,6,85,Não,Integração com estoque
+60,54,1,20250422,2,3,100,Sim,Testes e revisão final
+61,59,1,20250428,8,8,15,Não,Configuração do certificado digital
+62,59,1,20250429,8,9,35,Não,Geração do XML da NF-e
+63,59,1,20250430,8,8,50,Não,Validação do schema SEFAZ
+64,59,6,20250502,8,9,60,Não,Envio para homologação SEFAZ
+65,59,6,20250505,8,7,62,Não,Tratamento de retornos e erros
+66,63,7,20250502,4,4,30,Não,Layout da tela de emissão
+67,63,7,20250505,4,5,55,Não,Formulário de preenchimento de NF-e
+68,63,7,20250506,4,4,70,Não,Integração com API de emissão

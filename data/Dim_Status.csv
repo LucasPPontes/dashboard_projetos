@@ -1,0 +1,9 @@
+id_status,nome_status,categoria,ordem,cor_hex
+1,Backlog,Pendente,1,#A0AEC0
+2,A Fazer,Pendente,2,#718096
+3,Em Andamento,Ativo,3,#4299E1
+4,Em Revisão,Ativo,4,#9F7AEA
+5,Em Teste,Ativo,5,#ED8936
+6,Concluído,Finalizado,6,#48BB78
+7,Cancelado,Finalizado,7,#FC8181
+8,Bloqueado,Impedimento,8,#E53E3E

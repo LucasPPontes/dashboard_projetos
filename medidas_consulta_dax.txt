@@ -1,0 +1,109 @@
+DEFINE
+    MEASURE medidas[Progresso Geral %] = 
+        VAR TotalTarefas = COUNTROWS(Dim_Tarefa)
+        VAR Concluidas = CALCULATE(
+            COUNTROWS(Dim_Tarefa),
+            Dim_Status[nome_status] = "Concluído"
+        )
+        RETURN DIVIDE(Concluidas, TotalTarefas, 0)
+
+    MEASURE medidas[Tarefas Concluídas] = 
+        CALCULATE(
+            COUNTROWS(Dim_Tarefa),
+            Dim_Status[nome_status] = "Concluído"
+        )
+
+    MEASURE medidas[Total Tarefas] = COUNTROWS(Dim_Tarefa)
+
+    MEASURE medidas[Tarefas Formato Texto] = 
+        FORMAT(medidas[Tarefas Concluídas], "0") & " / " & FORMAT(medidas[Total Tarefas], "0")
+
+    MEASURE medidas[Funcionalidades Concluídas] = 
+        CALCULATE(
+            COUNTROWS(Dim_Funcionalidade),
+            Dim_Funcionalidade[percentual_conclusao] = 100
+        )
+
+    MEASURE medidas[Total Funcionalidades] = COUNTROWS(Dim_Funcionalidade)
+
+    MEASURE medidas[% Funcionalidades Concluídas] = 
+        DIVIDE(medidas[Funcionalidades Concluídas], medidas[Total Funcionalidades], 0)
+
+    MEASURE medidas[Bugs Abertos] = 
+        CALCULATE(
+            COUNTROWS(Fact_Defeito),
+            Dim_Status[categoria] IN {"Ativo", "Pendente", "Impedimento"}
+        )
+
+    MEASURE medidas[Bugs Críticos Abertos] = 
+        CALCULATE(
+            COUNTROWS(Fact_Defeito),
+            Dim_Status[categoria] IN {"Ativo", "Pendente", "Impedimento"},
+            Dim_Prioridade[nivel_prioridade] = "Crítica"
+        )
+
+    MEASURE medidas[Bugs Resolvidos] = 
+        CALCULATE(
+            COUNTROWS(Fact_Defeito),
+            Dim_Status[nome_status] = "Concluído"
+        )
+
+    MEASURE medidas[Taxa Resolução Bugs %] = 
+        DIVIDE(medidas[Bugs Resolvidos], COUNTROWS(Fact_Defeito), 0)
+
+    MEASURE medidas[Total Horas Trabalhadas] = SUM(Fact_Acompanhamento[horas_trabalhadas])
+
+    MEASURE medidas[Total Horas Estimadas] = SUM(Fact_Acompanhamento[horas_estimadas])
+
+    MEASURE medidas[% Orçamento Horas Consumido] = 
+        DIVIDE(medidas[Total Horas Trabalhadas], medidas[Total Horas Estimadas], 0)
+
+    MEASURE medidas[% Conclusão Funcionalidade] = 
+        MAX(Dim_Funcionalidade[percentual_conclusao]) / 100
+
+    MEASURE medidas[Cor Barra Funcionalidade] = 
+        SWITCH(
+            TRUE(),
+            medidas[% Conclusão Funcionalidade] = 1, "#10B981",
+            medidas[% Conclusão Funcionalidade] > 0, "#2563EB",
+            "#94A3B8"
+        )
+
+    MEASURE medidas[Qtd Tarefas por Status] = COUNTROWS(Dim_Tarefa)
+
+    MEASURE medidas[% Tarefas por Status] = 
+        DIVIDE(medidas[Qtd Tarefas por Status], CALCULATE(COUNTROWS(Dim_Tarefa), ALL(Dim_Status)), 0)
+
+    MEASURE medidas[Horas Ideal Burndown] = 
+        VAR TotalSprintHoras = CALCULATE(medidas[Total Horas Estimadas], ALL(Dim_Tempo))
+        VAR DiasTotaisSprint = CALCULATE(COUNTROWS(Dim_Tempo), ALL(Dim_Tempo))
+        VAR DiaAtualIndex = SELECTEDVALUE(Dim_Tempo[id_data])
+        RETURN TotalSprintHoras * (1 - DIVIDE(DiaAtualIndex, DiasTotaisSprint))
+
+    MEASURE medidas[Horas Realizadas Burndown] = 
+        VAR HorasAcumuladas = CALCULATE(
+            medidas[Total Horas Trabalhadas],
+            FILTER(
+                ALLSELECTED(Dim_Tempo),
+                Dim_Tempo[id_data] <= MAX(Dim_Tempo[id_data])
+            )
+        )
+        RETURN medidas[Total Horas Estimadas] - HorasAcumuladas
+
+    MEASURE medidas[Qtd Defeitos] = COUNTROWS(Fact_Defeito)
+
+    MEASURE medidas[% Defeitos sobre Total] = 
+        DIVIDE(medidas[Qtd Defeitos], CALCULATE(COUNTROWS(Fact_Defeito), ALL(Dim_Categoria_Defeito)), 0)
+
+    MEASURE medidas[Horas por Responsável] = SUM(Fact_Acompanhamento[horas_trabalhadas])
+
+    MEASURE medidas[% Participação Equipe %] = 
+        DIVIDE(medidas[Horas por Responsável], CALCULATE(SUM(Fact_Acompanhamento[horas_trabalhadas]), ALL(Dim_Responsavel)), 0)
+
+    MEASURE medidas[Tempo Médio Resolução Bugs] = 
+        AVERAGE(Fact_Defeito[tempo_resolucao_horas])
+
+EVALUATE
+    ROW(
+        "Mensagem", "Todas as 21 medidas prontas para serem aplicadas ao modelo!"
+    )

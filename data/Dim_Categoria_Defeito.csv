@@ -1,0 +1,8 @@
+id_categoria_defeito,categoria,descricao,impacto
+1,Funcional,Comportamento incorreto de uma funcionalidade,Alto
+2,Performance,Lentidão ou consumo excessivo de recursos,Médio
+3,Interface,Problemas visuais ou de usabilidade,Baixo
+4,Segurança,Vulnerabilidade ou falha de autenticação,Crítico
+5,Integração,Falha na comunicação entre módulos ou APIs,Alto
+6,Dados,Inconsistência ou perda de dados,Crítico
+7,Compatibilidade,Problema em navegador ou dispositivo específico,Médio

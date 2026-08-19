@@ -1,0 +1,20 @@
+id_funcionalidade,id_projeto,nome_funcionalidade,descricao,id_sprint,id_prioridade,percentual_conclusao,data_inicio,data_fim_prevista
+1,1,Infraestrutura e CI/CD,Configuração de servidores pipelines e ambientes,1,1,100,2025-01-06,2025-01-17
+2,1,Autenticação e Autorização,Login SSO controle de perfis e permissões,2,1,100,2025-01-20,2025-01-31
+3,1,Cadastro de Clientes,Gestão completa de clientes e contatos,3,2,100,2025-02-03,2025-02-14
+4,1,Cadastro de Fornecedores,Gestão de fornecedores e contratos,3,2,100,2025-02-03,2025-02-14
+5,1,Cadastro de Produtos,Catálogo de produtos com categorias e preços,3,2,100,2025-02-03,2025-02-14
+6,1,Contas a Pagar,Lançamento aprovação e pagamento de contas,4,1,100,2025-02-17,2025-02-28
+7,1,Contas a Receber,Emissão de boletos e controle de recebimentos,4,1,100,2025-02-17,2025-02-28
+8,1,Fluxo de Caixa,Visão consolidada de entradas e saídas financeiras,5,2,100,2025-03-03,2025-03-14
+9,1,Relatórios Financeiros,DRE balanço e indicadores financeiros,5,3,100,2025-03-03,2025-03-14
+10,1,Controle de Estoque,Movimentação de entrada e saída de itens,6,1,100,2025-03-17,2025-03-28
+11,1,Inventário e Alertas,Contagem física e alertas de estoque mínimo,7,2,100,2025-03-31,2025-04-11
+12,1,Pedidos e Orçamentos,Criação e aprovação de pedidos de venda,8,1,100,2025-04-14,2025-04-25
+13,1,Faturamento e NF-e,Emissão de notas fiscais integrada à SEFAZ,9,1,62,2025-04-28,2025-05-09
+14,1,Cadastro de Funcionários,Dados pessoais cargos e departamentos de RH,10,2,0,2025-05-12,2025-05-23
+15,1,Folha de Pagamento,Cálculo de salários descontos e encargos,10,1,0,2025-05-12,2025-05-23
+16,1,Ponto Eletrônico,Registro e apuração de ponto dos funcionários,11,3,0,2025-05-26,2025-06-06
+17,1,Gestão de Férias,Solicitação aprovação e controle de férias,11,3,0,2025-05-26,2025-06-06
+18,1,Dashboard Gerencial,Painel com KPIs e métricas do negócio,12,2,0,2025-06-09,2025-06-20
+19,1,Relatórios Gerenciais,Relatórios customizáveis e exportação,12,3,0,2025-06-09,2025-06-20

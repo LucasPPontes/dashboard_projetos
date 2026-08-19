@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background-color: #F1F5F9; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <!-- Card Soft Drop Shadow -->
+    <filter id="cardShadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+    
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= CANVAS BACKGROUND ================= -->
+  <rect x="0" y="0" width="1920" height="1080" fill="#F1F5F9"/>
+
+  <!-- ================= TOP HEADER BAR ================= -->
+  <rect x="0" y="0" width="1920" height="80" fill="url(#headerGrad)"/>
+  
+  <!-- Logo / Brand Icon -->
+  <rect x="24" y="20" width="40" height="40" rx="8" fill="#2563EB"/>
+  <path d="M 34 44 L 42 28 L 50 44 Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="42" cy="34" r="3" fill="#60A5FA"/>
+
+  <!-- Title & Subtitle -->
+  <text x="80" y="38" fill="#FFFFFF" font-size="20" font-weight="700" letter-spacing="0.5">DASHBOARD DE ACOMPANHAMENTO DE PROJETO</text>
+  <text x="80" y="58" fill="#94A3B8" font-size="13" font-weight="500">Sistema ERP Integrado • Arquitetura Snowflake</text>
+
+  <!-- Header Slicer Placeholders (Where Power BI Slicers are positioned) -->
+  <!-- Slicer Slot 1: Sprint -->
+  <g transform="translate(1220, 20)">
+    <rect x="0" y="0" width="170" height="40" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="14" y="15" fill="#94A3B8" font-size="10" font-weight="600">FILTRO SPRINT</text>
+  </g>
+
+  <!-- Slicer Slot 2: Equipe -->
+  <g transform="translate(1405, 20)">
+    <rect x="0" y="0" width="160" height="40" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="14" y="15" fill="#94A3B8" font-size="10" font-weight="600">FILTRO EQUIPE</text>
+  </g>
+
+  <!-- Slicer Slot 3: Prioridade -->
+  <g transform="translate(1580, 20)">
+    <rect x="0" y="0" width="150" height="40" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="14" y="15" fill="#94A3B8" font-size="10" font-weight="600">PRIORIDADE</text>
+  </g>
+
+  <!-- Badge Slot: Status Geral -->
+  <g transform="translate(1745, 20)">
+    <rect x="0" y="0" width="150" height="40" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <circle cx="20" cy="20" r="4" fill="#10B981"/>
+    <text x="32" y="18" fill="#94A3B8" font-size="10">STATUS PROJETO</text>
+    <text x="32" y="31" fill="#E2E8F0" font-size="11" font-weight="600">Em Andamento</text>
+  </g>
+
+  <!-- ================= ROW 1: KPI CARDS CONTAINERS (5 Cards) ================= -->
+  
+  <!-- KPI Container 1: Progresso Geral -->
+  <g transform="translate(24, 100)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="360" height="125" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="125" rx="3" fill="#2563EB"/>
+    <text x="24" y="30" fill="#64748B" font-size="12" font-weight="700" letter-spacing="0.5">PROGRESSO GERAL DO PROJETO</text>
+  </g>
+
+  <!-- KPI Container 2: Funcionalidades -->
+  <g transform="translate(400, 100)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="360" height="125" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="125" rx="3" fill="#10B981"/>
+    <text x="24" y="30" fill="#64748B" font-size="12" font-weight="700" letter-spacing="0.5">FUNCIONALIDADES ENTREGUES</text>
+  </g>
+
+  <!-- KPI Container 3: Tarefas Concluídas -->
+  <g transform="translate(776, 100)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="360" height="125" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="125" rx="3" fill="#F59E0B"/>
+    <text x="24" y="30" fill="#64748B" font-size="12" font-weight="700" letter-spacing="0.5">TAREFAS &amp; SUBTAREFAS</text>
+  </g>
+
+  <!-- KPI Container 4: Defeitos / Bugs -->
+  <g transform="translate(1152, 100)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="360" height="125" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="125" rx="3" fill="#EF4444"/>
+    <text x="24" y="30" fill="#64748B" font-size="12" font-weight="700" letter-spacing="0.5">DEFEITOS &amp; BUGS ABERTOS</text>
+  </g>
+
+  <!-- KPI Container 5: Horas Trabalhadas -->
+  <g transform="translate(1528, 100)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="368" height="125" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="125" rx="3" fill="#6366F1"/>
+    <text x="24" y="30" fill="#64748B" font-size="12" font-weight="700" letter-spacing="0.5">HORAS TRABALHADAS</text>
+  </g>
+
+  <!-- ================= ROW 2: MAIN CHART CONTAINERS (3 Columns) ================= -->
+  
+  <!-- Container 1 (Left): Progresso por Funcionalidade -->
+  <g transform="translate(24, 245)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="870" height="420" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="34" fill="#0F172A" font-size="16" font-weight="700">Progresso por Funcionalidade (%)</text>
+    <text x="24" y="52" fill="#64748B" font-size="12">Acompanhamento detalhado das funcionalidades do projeto</text>
+    <line x1="24" y1="65" x2="846" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- Container 2 (Center): Status das Tarefas -->
+  <g transform="translate(918, 245)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="460" height="420" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="34" fill="#0F172A" font-size="16" font-weight="700">Distribuição de Status</text>
+    <text x="24" y="52" fill="#64748B" font-size="12">Visão de tarefas e subtarefas por status</text>
+    <line x1="24" y1="65" x2="436" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- Container 3 (Right): Burndown do Sprint -->
+  <g transform="translate(1402, 245)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="494" height="420" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="34" fill="#0F172A" font-size="16" font-weight="700">Burndown — Sprint Atual</text>
+    <text x="24" y="52" fill="#64748B" font-size="12">Horas restantes esperadas vs executadas por dia</text>
+    <line x1="24" y1="65" x2="470" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- ================= ROW 3: BOTTOM CONTAINERS (3 Columns) ================= -->
+  
+  <!-- Container 4 (Bottom Left): Defeitos por Categoria -->
+  <g transform="translate(24, 685)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="560" height="370" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="34" fill="#0F172A" font-size="16" font-weight="700">Defeitos por Categoria</text>
+    <text x="24" y="52" fill="#64748B" font-size="12">Distribuição de defeitos encontrados no ciclo de testes</text>
+    <line x1="24" y1="65" x2="536" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- Container 5 (Bottom Center): Horas Trabalhadas por Responsável -->
+  <g transform="translate(608, 685)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="580" height="370" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="34" fill="#0F172A" font-size="16" font-weight="700">Horas Trabalhadas por Responsável</text>
+    <text x="24" y="52" fill="#64748B" font-size="12">Carga de trabalho acumulada por membro da equipe</text>
+    <line x1="24" y1="65" x2="556" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+
+  <!-- Container 6 (Bottom Right): Defeitos Recentes / Tabela -->
+  <g transform="translate(1212, 685)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="684" height="370" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="34" fill="#0F172A" font-size="16" font-weight="700">Defeitos Recentes &amp; Impedimentos</text>
+    <text x="24" y="52" fill="#64748B" font-size="12">Registros detalhados no ambiente de staging/produção</text>
+    <line x1="24" y1="65" x2="660" y2="65" stroke="#F1F5F9" stroke-width="1"/>
+  </g>
+</svg>

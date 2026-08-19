@@ -1,0 +1,13 @@
+id_sprint,nome_sprint,data_inicio,data_fim,objetivo,status_sprint
+1,Sprint 1 - Fundação,2025-01-06,2025-01-17,Configuração de infraestrutura e arquitetura base,Concluída
+2,Sprint 2 - Autenticação,2025-01-20,2025-01-31,Módulo de autenticação e controle de acesso,Concluída
+3,Sprint 3 - Cadastros Base,2025-02-03,2025-02-14,Cadastros de clientes fornecedores e produtos,Concluída
+4,Sprint 4 - Financeiro I,2025-02-17,2025-02-28,Módulo financeiro contas a pagar e receber,Concluída
+5,Sprint 5 - Financeiro II,2025-03-03,2025-03-14,Fluxo de caixa e relatórios financeiros,Concluída
+6,Sprint 6 - Estoque I,2025-03-17,2025-03-28,Controle de estoque entradas e saídas,Concluída
+7,Sprint 7 - Estoque II,2025-03-31,2025-04-11,Inventário e alertas de estoque,Concluída
+8,Sprint 8 - Vendas I,2025-04-14,2025-04-25,Módulo de pedidos e orçamentos,Concluída
+9,Sprint 9 - Vendas II,2025-04-28,2025-05-09,Faturamento e NF-e,Em Andamento
+10,Sprint 10 - RH I,2025-05-12,2025-05-23,Cadastro de funcionários e folha de pagamento,Planejada
+11,Sprint 11 - RH II,2025-05-26,2025-06-06,Ponto eletrônico e férias,Planejada
+12,Sprint 12 - Relatórios,2025-06-09,2025-06-20,Dashboard e relatórios gerenciais,Planejada

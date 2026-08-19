@@ -1,0 +1,18 @@
+id_defeito,id_tarefa,id_funcionalidade,id_responsavel_reportou,id_responsavel_corrige,id_categoria_defeito,id_status,id_prioridade,titulo,descricao,ambiente,data_abertura,data_conclusao,versao_encontrada,versao_corrigida,reaberto,tempo_resolucao_horas
+1,12,2,5,1,1,6,1,Token JWT expira antes do prazo configurado,Token de acesso expira em 5 min mesmo configurado para 60 min,Staging,2025-01-22,2025-01-23,1.0.0,1.0.1,Não,8
+2,16,2,5,3,3,6,2,Tela de login não responsiva em mobile,Layout quebrado em telas menores que 375px,Staging,2025-01-24,2025-01-27,1.0.0,1.0.1,Não,6
+3,21,2,9,1,4,6,1,Usuário consegue acessar rotas sem permissão,Falha no middleware de autorização permite acesso a rotas protegidas,Staging,2025-01-28,2025-01-30,1.0.1,1.0.2,Sim,20
+4,25,3,9,6,1,6,2,Validação de CNPJ aceita valores inválidos,CNPJ com dígitos verificadores incorretos é aceito no cadastro,Staging,2025-02-05,2025-02-06,1.1.0,1.1.1,Não,4
+5,30,3,9,7,3,6,3,Paginação retorna registros duplicados,Ao navegar para segunda página alguns clientes aparecem repetidos,Staging,2025-02-07,2025-02-10,1.1.0,1.1.1,Não,6
+6,36,5,5,6,2,6,2,Busca de produtos lenta com mais de 1000 registros,Tempo de resposta acima de 8 segundos na listagem com filtro,Produção,2025-02-20,2025-02-24,1.2.0,1.2.1,Não,16
+7,38,6,9,11,1,6,1,Lançamento duplicado ao clicar duas vezes no botão salvar,Double-click cria dois lançamentos financeiros idênticos,Produção,2025-02-20,2025-02-21,1.3.0,1.3.1,Não,4
+8,40,6,9,11,5,6,1,Aprovação não notifica aprovador por e-mail,E-mail de notificação não é enviado ao aprovador designado,Staging,2025-02-22,2025-02-25,1.3.0,1.3.1,Não,10
+9,41,6,9,11,5,6,1,Integração bancária falha no processamento de boleto,Boleto gerado não é aceito pelo gateway de pagamento,Produção,2025-02-26,2025-02-28,1.3.1,1.3.2,Sim,24
+10,44,8,9,1,6,6,1,Saldo do fluxo de caixa inconsistente após exclusão de lançamento,Exclusão de lançamento não atualiza corretamente o saldo acumulado,Produção,2025-03-06,2025-03-07,1.4.0,1.4.1,Não,6
+11,47,10,9,11,1,6,2,Entrada de estoque não valida quantidade negativa,Sistema aceita movimentação com quantidade -1 causando saldo negativo,Staging,2025-03-19,2025-03-20,1.5.0,1.5.1,Não,4
+12,51,10,5,7,3,6,3,Gráfico de evolução de estoque não renderiza no Firefox,Componente de chart não compatível com Firefox 120,Staging,2025-03-21,2025-03-25,1.5.0,1.5.1,Não,8
+13,54,12,9,1,1,6,1,Pedido com desconto acima de 100% é salvo sem erro,Validação de desconto permite valores acima de 100%,Staging,2025-04-16,2025-04-17,1.6.0,1.6.1,Não,4
+14,56,12,9,1,1,6,1,Cálculo de ICMS incorreto para produtos do Simples Nacional,Alíquota de ICMS aplicada incorretamente para ME e EPP,Produção,2025-04-22,2025-04-24,1.6.1,1.6.2,Sim,16
+15,59,13,9,1,5,3,1,Timeout na comunicação com SEFAZ em horário de pico,Requisição à SEFAZ expira após 30 segundos em horário de pico,Produção,2025-05-01,,1.7.0,,Não,
+16,59,13,5,6,1,3,1,XML da NF-e rejeitado com código 539 pela SEFAZ,Schema do XML não atende versão 4.0 do manual da NF-e,Staging,2025-05-05,,1.7.0,,Não,
+17,63,13,9,7,3,4,2,Máscara de CEP não funciona no formulário de NF-e,Campo de CEP aceita qualquer texto sem formatação,Staging,2025-05-06,,1.7.0,,Não,

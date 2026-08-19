@@ -1,0 +1,2 @@
+id_projeto,nome_projeto,descricao,data_inicio,data_fim_prevista,gerente,status_projeto,orcamento,id_cliente
+1,Sistema ERP Integrado,Desenvolvimento de sistema ERP completo para gestão empresarial,2025-01-06,2025-12-31,Ana Paula Ribeiro,Em Andamento,850000.00,101
