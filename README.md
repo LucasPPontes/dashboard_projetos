@@ -3,7 +3,6 @@
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-Query_View-2563EB?style=for-the-badge)
 ![Snowflake Architecture](https://img.shields.io/badge/Data_Warehouse-Snowflake_Schema-00A4E4?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-10B981?style=for-the-badge)
 
 > ⚠️ **Aviso Importante:** Todos os dados, métricas e informações contidos neste projeto são **100% fictícios**. Este repositório foi desenvolvido estritamente para uso pessoal, fins de estudo e composição de portfólio profissional.
 
